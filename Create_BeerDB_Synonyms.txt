@@ -1,0 +1,35 @@
+-- Synonyms are useful as a method for
+-- implementing nameing and location transparency
+-- in distributed database environments.
+-- Basically, a synonym can offer a "local"
+-- name, while hiding the schema and even the
+-- database instance whether local or remote.
+-- dberndt@usf.edu
+
+
+
+-- Create public synonyms for the BeerDB.
+-- This has already been executed for you.
+-- You should be able to query these tables
+-- from your account (so try it out).
+
+CREATE PUBLIC SYNONYM beers FOR beerdb.beers;
+CREATE PUBLIC SYNONYM breweries FOR beerdb.breweries;
+CREATE PUBLIC SYNONYM categories FOR beerdb.categories;
+CREATE PUBLIC SYNONYM colors FOR beerdb.colors;
+CREATE PUBLIC SYNONYM styles FOR beerdb.styles;
+
+-- Note: You can use CREATE SYNONYM to build
+-- private synonyms (not public synonyms),
+-- so try it out.
+
+
+
+-- The DROP statement can be used to remove
+-- the synonyms as necessay.
+
+DROP PUBLIC SYNONYM beers;
+DROP PUBLIC SYNONYM breweries;
+DROP PUBLIC SYNONYM categories;
+DROP PUBLIC SYNONYM colors;
+DROP PUBLIC SYNONYM styles;
